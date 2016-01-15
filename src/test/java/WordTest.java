@@ -21,7 +21,7 @@ public class WordTest {
   }
 
   @Test
-  public void word_changesInputToLowerCase() {
+  public void word_changesInputWordToLowerCase() {
     Word testWord = new Word("lImN");
     assertEquals("limn", testWord.getWord());
   }
