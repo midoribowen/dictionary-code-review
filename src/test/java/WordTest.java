@@ -19,7 +19,7 @@ public class WordTest {
 
   @Test
     public void getDefinitions_initiallyReturnsEmptyArrayList() {
-      Word testWord = new Word("Home");
+      Word testWord = new Word("limn");
       assertTrue(testWord.getDefinitions() instanceof ArrayList);
     }
 
@@ -41,6 +41,14 @@ public class WordTest {
   public void find_returnsWordWithSameId() {
     Word testWord = new Word("limn");
     assertEquals(Word.find(testWord.getId()), testWord);
+  }
+
+  @Test
+  public void addDefinition_addsDefinitionToWordList() {
+    Word testWord = new Word("limn");
+    Definition testDefinition = new Definition("to draw or paint on a surface");
+    testWord.addDefinition(testDefinition);
+    assertTrue(testWord.getDefinitions().contains(testDefinition));
   }
 
 

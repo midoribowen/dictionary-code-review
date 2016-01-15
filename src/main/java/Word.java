@@ -35,4 +35,8 @@ public class Word {
     return instances.get(id-1);
   }
 
+  public void addDefinition(Definition definition) {
+    mDefinitions.add(definition);
+  }
+
 }
