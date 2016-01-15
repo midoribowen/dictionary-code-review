@@ -31,4 +31,8 @@ public class Word {
     return mId;
   }
 
+  public static Word find(int id) {
+    return instances.get(id-1);
+  }
+
 }

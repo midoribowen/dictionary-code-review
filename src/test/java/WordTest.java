@@ -35,7 +35,12 @@ public class WordTest {
     Word secondWord = new Word("brogue");
     assertTrue(Word.all().contains(firstWord));
     assertTrue(Word.all().contains(secondWord));
+  }
 
+  @Test
+  public void find_returnsWordWithSameId() {
+    Word testWord = new Word("limn");
+    assertEquals(Word.find(testWord.getId()), testWord);
   }
 
 
