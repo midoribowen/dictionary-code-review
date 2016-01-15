@@ -1,9 +1,9 @@
 public class Word {
 
-  public Word(String wordEntry) {
+  public Word(String word) {
 
   }
 
-  
+
 
 }

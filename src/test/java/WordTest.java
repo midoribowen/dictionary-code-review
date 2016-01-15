@@ -5,14 +5,14 @@ public class WordTest {
 
   @Test
   public void word_instantiatesCorrectly_true() {
-    Word testWordEntry = new Word("limn");
-    assertEquals(true, testWordEntry instanceof Word);
+    Word testWord = new Word("limn");
+    assertEquals(true, testWord instanceof Word);
   }
 
   // @Test
   // public void word_instantiatesWithWord_true() {
-  //   Word testWordEntry = new Word("limn");
-  //   assertEquals("limn", testWordEntry.getWord());
+  //   Word testWord = new Word("limn");
+  //   assertEquals("limn", testWord.getWord());
   // }
 
 }
