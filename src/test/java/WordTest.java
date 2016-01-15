@@ -21,6 +21,12 @@ public class WordTest {
   }
 
   @Test
+  public void word_changesInputToLowerCase() {
+    Word testWord = new Word("lImN");
+    assertEquals("limn", testWord.getWord());
+  }
+
+  @Test
     public void getDefinitions_initiallyReturnsEmptyArrayList() {
       Word testWord = new Word("limn");
       assertTrue(testWord.getDefinitions() instanceof ArrayList);

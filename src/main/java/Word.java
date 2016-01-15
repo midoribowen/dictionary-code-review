@@ -16,7 +16,7 @@ public class Word {
   }
 
   public String getWord() {
-    return mWord;
+    return mWord.toLowerCase();
   }
 
   public static ArrayList<Word> all() {
@@ -37,7 +37,6 @@ public class Word {
     } catch (IndexOutOfBoundsException ioobe) {
       return null;
     }
-
   }
 
   public void addDefinition(Definition definition) {
