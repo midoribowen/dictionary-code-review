@@ -22,12 +22,12 @@ public class WordTest {
       Word testWord = new Word("Home");
       assertTrue(testWord.getDefinitions() instanceof ArrayList);
     }
-  //
-  // @Test
-  // public void getId_returnsWordId() {
-  //   Word testWord = new Word("limn");
-  //   assertTrue(Word.all().size() == testWord.getId());
-  // }
+
+  @Test
+  public void getId_returnsWordId() {
+    Word testWord = new Word("limn");
+    assertTrue(Word.all().size() == testWord.getId());
+  }
 
 
 

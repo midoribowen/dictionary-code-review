@@ -4,16 +4,15 @@ public class Word {
 
   private String mWord;
   private static ArrayList<Word> instances = new ArrayList<Word>();
-  // private int mId;
   private ArrayList<Definition> mDefinitions;
+  private int mId;
 
   public Word(String word) {
 
     mWord = word;
     instances.add(this);
-    // mId = instances.size();
     mDefinitions = new ArrayList<Definition>();
-
+    mId = instances.size();
   }
 
   public String getWord() {
@@ -26,6 +25,10 @@ public class Word {
 
   public ArrayList<Definition> getDefinitions() {
     return mDefinitions;
+  }
+
+  public int getId() {
+    return mId;
   }
 
 }
