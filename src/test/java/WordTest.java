@@ -9,10 +9,10 @@ public class WordTest {
     assertEquals(true, testWord instanceof Word);
   }
 
-  // @Test
-  // public void word_instantiatesWithWord_true() {
-  //   Word testWord = new Word("limn");
-  //   assertEquals("limn", testWord.getWord());
-  // }
+  @Test
+  public void word_instantiatesWithWord_true() {
+    Word testWord = new Word("limn");
+    assertEquals("limn", testWord.getWord());
+  }
 
 }
