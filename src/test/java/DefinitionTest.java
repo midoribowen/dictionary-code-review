@@ -42,4 +42,9 @@ public class DefinitionTest {
     assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
   }
 
+  @Test
+  public void find_returnsNullWhenNoDefinitionFound_null() {
+    assertTrue(Definition.find(1000) == null);
+  }
+
 }
