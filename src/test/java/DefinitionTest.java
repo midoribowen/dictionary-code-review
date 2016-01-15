@@ -29,4 +29,10 @@ public class DefinitionTest {
     assertTrue(Definition.all().contains(secondDefinition));
   }
 
+  @Test
+  public void getId_definitionsInstantiateWithAnId_true() {
+    Definition myDefinition = new Definition("to draw or paint on a surface");
+    assertEquals(Definition.all().size(), myDefinition.getId());
+  }
+
 }
