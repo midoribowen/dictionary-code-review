@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.fluentlenium.core.filter.FilterConstructor.*;
 
 public class AppTest extends FluentTest {
   public WebDriver webDriver = new HtmlUnitDriver();
@@ -20,13 +21,13 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     assertThat(pageSource()).contains("Your Dictionary");
   }
-    //This tests is a page contains particular contents
 
-  // @Test public void testNameHere() {
-  //   goTo("http://localhost:4567/");
-  //   fill("#tag").with("userInput");
-  //   submit(".btn");
-  //   assertThat(pageSource()).contains("//userInput//");
-  // }
-  //   //This tests if a tagged fill is outputing correctly with the user input in the right place.
+  @Test
+  public void wordIsCreatedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add a New Word"));
+    fill("#word").with("limn");
+    submit(".btn");
+    assertThat(pageSource()).contains("Your word has been saved");
+  }
 }
