@@ -50,15 +50,15 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("limn");
   }
 
-  // @Test
-  // public void wordDefinitionFormIsDisplayed() {
-  //   goTo("http://localhost:4567/words/new");
-  //   fill("word").with("limn");
-  //   submit(".btn");
-  //   click("a", withText("View Your Dictionary"));
-  //   click("a", withText("limn"));
-  //   click("a", withText("Add a New Definition"));
-  //   assertThat(pageSource()).contains("Add a Definition to limn")
-  // }
+  @Test
+  public void wordDefinitionFormIsDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("brogue");
+    submit(".btn");
+    click("a", withText("View Your Dictionary"));
+    click("a", withText("brogue"));
+    click("a", withText("Add a New Definition"));
+    assertThat(pageSource()).contains("Add a Definition to brogue");
+  }
 
 }
