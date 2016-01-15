@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -15,11 +17,11 @@ public class WordTest {
     assertEquals("limn", testWord.getWord());
   }
 
-  // @Test
-  // public void getTasks_intiallyReturnsEmptyArrayList() {
-  //   Word testWord = new Word("limn");
-  //   assertTrue(testWord.getWord() instanceof ArrayList);
-  // }
+  @Test
+    public void getDefinitions_initiallyReturnsEmptyArrayList() {
+      Word testWord = new Word("Home");
+      assertTrue(testWord.getDefinitions() instanceof ArrayList);
+    }
   //
   // @Test
   // public void getId_returnsWordId() {
