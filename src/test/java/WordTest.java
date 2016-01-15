@@ -5,8 +5,8 @@ import static org.junit.Assert.*;
 
 public class WordTest {
 
-  // @Rule
-  // public ClearRule clearRule = new ClearRule();
+  @Rule
+  public ClearRule clearRule = new ClearRule();
 
   @Test
   public void word_instantiatesCorrectly_true() {
@@ -59,11 +59,11 @@ public class WordTest {
     assertTrue(Word.find(1000) == null);
   }
 
-  // @Test
-  // public void clear_removesAllWordInstancesFromMemory() {
-  //   Word testWord = new Word("limn");
-  //   Word.clear();
-  //   assertEquals(Word.all().size(), 0);
-  // }
+  @Test
+  public void clear_removesAllWordInstancesFromMemory() {
+    Word testWord = new Word("limn");
+    Word.clear();
+    assertEquals(Word.all().size(), 0);
+  }
 
 }
