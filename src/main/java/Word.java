@@ -32,11 +32,20 @@ public class Word {
   }
 
   public static Word find(int id) {
-    return instances.get(id-1);
+    try {
+      return instances.get(id-1);
+    } catch (IndexOutOfBoundsException ioobe) {
+      return null;
+    }
+
   }
 
   public void addDefinition(Definition definition) {
     mDefinitions.add(definition);
   }
+
+  // public static void clear() {
+  //   instances.clear();
+  // }
 
 }
