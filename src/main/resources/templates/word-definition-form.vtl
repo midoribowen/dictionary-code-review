@@ -1,5 +1,12 @@
 <h1>Add a Definition to $word.getWord()</h1>
 
-<form action="index.html" method="post">
+<form action="/words/:id" method="post">
+  <input id="wordId" name="wordId" type="hidden" value="$word.getId()">
 
+  <div class="form-group">
+    <label for="definition">Enter Your Definition Here: </label>
+    <input id="definition" name="definition" type="text">
+  </div>
+
+  <button type="submit" class="btn btn-success">Add a New Definition</button>
 </form>

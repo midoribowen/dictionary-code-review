@@ -61,4 +61,17 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("Add a Definition to brogue");
   }
 
+  @Test
+  public void definitionIsAddedAndDisplayed() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("chirography");
+    submit(".btn");
+    click("a", withText("View Your Dictionary"));
+    click("a", withText("chirography"));
+    click("a", withText("Add a New Definition"));
+    fill("#definition").with("handwriting, penmanship");
+    submit(".btn");
+    assertThat(pageSource()).contains("handwriting, penmanship");
+  }
+
 }
