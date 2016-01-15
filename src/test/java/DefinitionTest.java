@@ -19,6 +19,12 @@ public class DefinitionTest {
   }
 
   @Test
+  public void definition_changesInputDescriptionToLowerCase() {
+    Definition testDefinition = new Definition("To Draw Or Paint On A Surface");
+    assertEquals("to draw or paint on a surface", testDefinition.getDefinition());
+  }
+
+  @Test
   public void isCompleted_isFalseAfterInstantiation_false() {
     Definition myDefinition = new Definition("to draw or paint on a surface");
     assertEquals(false, myDefinition.isCompleted());

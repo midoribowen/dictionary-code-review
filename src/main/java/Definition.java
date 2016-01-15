@@ -15,7 +15,7 @@ public class Definition {
   }
 
   public String getDefinition() {
-    return mDefinition;
+    return mDefinition.toLowerCase();
   }
 
   public boolean isCompleted() {
