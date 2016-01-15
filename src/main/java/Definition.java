@@ -36,7 +36,10 @@ public class Definition {
     } catch (IndexOutOfBoundsException ioobe) {
       return null;
     }
+  }
 
+  public static void clear() {
+    instances.clear();
   }
 
 }

@@ -3,6 +3,9 @@ import static org.junit.Assert.*;
 
 public class DefinitionTest {
 
+  @Rule
+  public ClearRule clearRule = new ClearRule();
+
   @Test
   public void definition_instantiatesCorrectly_true() {
     Definition testDefinition = new Definition("to draw or paint on a surface");
@@ -45,6 +48,13 @@ public class DefinitionTest {
   @Test
   public void find_returnsNullWhenNoDefinitionFound_null() {
     assertTrue(Definition.find(1000) == null);
+  }
+
+  @Test
+  public void clear_emptiesAllDefinitionsFromArrayList() {
+    Definition myDefinition = new Definition("to draw or paint on a surface");
+    Definition.clear();
+    assertEquals(Definition.all().size(), 0);
   }
 
 }
