@@ -15,4 +15,10 @@ public class DefinitionTest {
     assertEquals("to draw, paint, outline, or describe", testDefinition.getDefinition());
   }
 
+  @Test
+  public void isCompleted_isFalseAfterInstantiation_false() {
+    Definition myDefinition = new Definition("to draw, paint, outline, or describe");
+    assertEquals(false, myDefinition.isCompleted());
+  }
+
 }
