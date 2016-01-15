@@ -35,4 +35,11 @@ public class DefinitionTest {
     assertEquals(Definition.all().size(), myDefinition.getId());
   }
 
+  @Test
+  public void find_returnsDefinitionsWithSameId_secondDefinition() {
+    Definition firstDefinition = new Definition("to draw or paint on a surface");
+    Definition secondDefinition = new Definition("to outline in clear sharp detail");
+    assertEquals(Definition.find(secondDefinition.getId()), secondDefinition);
+  }
+
 }
