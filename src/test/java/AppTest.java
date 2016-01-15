@@ -30,4 +30,13 @@ public class AppTest extends FluentTest {
     submit(".btn");
     assertThat(pageSource()).contains("Your word has been saved");
   }
+
+  @Test
+  public void wordIsDisplayedTest() {
+    goTo("http://localhost:4567/words/new");
+    fill("#word").with("limn");
+    submit(".btn");
+    click("a", withText("View Your Dictionary"));
+    assertThat(pageSource()).contains("limn");
+  }
 }
