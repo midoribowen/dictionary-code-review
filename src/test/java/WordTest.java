@@ -29,6 +29,15 @@ public class WordTest {
     assertTrue(Word.all().size() == testWord.getId());
   }
 
+  @Test
+  public void all_returnsAllInstancesOfWord_true() {
+    Word firstWord = new Word("limn");
+    Word secondWord = new Word("brogue");
+    assertTrue(Word.all().contains(firstWord));
+    assertTrue(Word.all().contains(secondWord));
+
+  }
+
 
 
 }
