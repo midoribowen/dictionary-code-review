@@ -1,34 +1,33 @@
-# _{Application Name}_
+# Your Dictionary
 
-#### _{Brief description of application}, {Date of current version}_
+#### A User-Created Dictionary with Definitions, January 15th, 2016
 
-#### By _**{List of contributors}**_
+#### By Midori Bowen
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This is a Java app that allows a user to create their own dictionary. On the home page, the user is prompted to Add a New Word. Following the next prompt, "Add a New Word", the user can add a word to their dictionary. The word is then saved and the user can then view their dictionary with the button "View Your Dictionary". If they click on that entry, the user can then add a definition by clicking the button "Add a New Definition". On the next page, the user can enter the definition for their word. After submitting this definition, the user will return to the word page. From here they can create more words by first clicking on the "View All Definitions" button.
+
+An additional function that is pending will list all of the definitions with links to their corresponding word. This function will create the ability for the user to test their knowledge of their dictionary.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+* Clone or Pull this repository
+* Install Gradle and Java
+* Navigate to the project directory on your Local and enter the command `gradle run`
+* Enter the link http://localhost:4567/ in your web browser
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+* Current bug with the routing for the definitions/ page. Definitions are not displayed.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+Contact me through Github for support or questions.
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+Java, JUnit, Spark, Fluentlenium, Velocity, Bootstrap, Gradle
 
 ### License
 
@@ -38,5 +37,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Copyright (c) 2015 **_{List of contributors or company name}_**
-
+Copyright (c) 2015 Midori Bowen
