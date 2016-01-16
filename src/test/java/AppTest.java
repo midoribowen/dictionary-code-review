@@ -28,7 +28,6 @@ public class AppTest extends FluentTest {
     click("a", withText("Add a New Word"));
     fill("#word").with("limn");
     submit(".btn-success");
-    submit(".btn");
     assertThat(pageSource()).contains("Your word has been saved");
   }
 
@@ -37,7 +36,6 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("limn");
     submit(".btn-success");
-    submit(".btn");
     click("a", withText("View Your Dictionary"));
     assertThat(pageSource()).contains("limn");
   }
@@ -47,7 +45,6 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("limn");
     submit(".btn-success");
-    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("limn"));
     assertThat(pageSource()).contains("limn");
@@ -58,7 +55,6 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("brogue");
     submit(".btn-success");
-    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("brogue"));
     click("a", withText("Add a New Definition"));
@@ -66,11 +62,10 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void definitionIsAddedAndDisplayed() {
+  public void definitionIsAddedAndDisplayedOnWordPage() {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("chirography");
     submit(".btn-success");
-    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("chirography"));
     click("a", withText("Add a New Definition"));
@@ -78,5 +73,25 @@ public class AppTest extends FluentTest {
     submit(".btn");
     assertThat(pageSource()).contains("handwriting, penmanship");
   }
+
+
+//
+//
+// This is the test for posting definitions to the definitions page. This test will not pass with current routing
+//
+  // @Test
+  // public void displayDefinitionsOnAllDefinitionsPage() {
+  //   goTo("http://localhost:4567/words/new");
+  //   fill("#word").with("mugwump");
+  //   submit(".btn-success");
+  //   click("a", withText("View Your Dictionary"));
+  //   click("a", withText("mugwump"));
+  //   click("a", withText("Add a New Definition"));
+  //   fill("#definition").with("a bolter from the Republican party in 1884");
+  //   submit(".btn");
+  //   click("a", withText("View All Definitions"));
+  //   assertThat(pageSource()).contains("a bolter from the Republican party in 1884");
+  // }
+
 
 }
