@@ -28,6 +28,7 @@ public class AppTest extends FluentTest {
     click("a", withText("Add a New Word"));
     fill("#word").with("limn");
     submit(".btn-success");
+    submit(".btn");
     assertThat(pageSource()).contains("Your word has been saved");
   }
 
@@ -36,6 +37,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("limn");
     submit(".btn-success");
+    submit(".btn");
     click("a", withText("View Your Dictionary"));
     assertThat(pageSource()).contains("limn");
   }
@@ -45,6 +47,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("limn");
     submit(".btn-success");
+    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("limn"));
     assertThat(pageSource()).contains("limn");
@@ -55,6 +58,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("brogue");
     submit(".btn-success");
+    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("brogue"));
     click("a", withText("Add a New Definition"));
@@ -66,6 +70,7 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/words/new");
     fill("#word").with("chirography");
     submit(".btn-success");
+    submit(".btn");
     click("a", withText("View Your Dictionary"));
     click("a", withText("chirography"));
     click("a", withText("Add a New Definition"));
